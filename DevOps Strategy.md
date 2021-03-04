@@ -1,6 +1,15 @@
 DevOps Strategy
 
-[toc]
+- [Objective](#objective)
+- [What is DevOps?](#what-is-devops)
+- [DevOps Principles](#devops-principles)
+    - [Design Ethos](#design-ethos)
+- [DevOps Framework](#devops-framework)
+    - [Framework Tools](#framework-tools)
+- [Automation Framework](#automation-framework)
+- [Recommended Reading and Sources](#recommended-reading-and-sources)
+    - [Recommended Reading](#recommended-reading)
+    - [Additional Sources](#additional-sources)
 
 ## Objective
 
