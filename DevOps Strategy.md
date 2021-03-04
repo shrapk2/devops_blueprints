@@ -1,4 +1,4 @@
-DevOps Strategy
+# DevOps Strategy
 
 - [Objective](#objective)
 - [What is DevOps?](#what-is-devops)
