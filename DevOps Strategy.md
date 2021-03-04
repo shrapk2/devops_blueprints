@@ -91,7 +91,7 @@ Without involvement from these key stakeholders, the true effect of DevOps (brea
 
 This framework can also be viewed as a “pipeline” in which to facilitate a DevOps workflow, visualized here as a Kanban board:
 
-![1cb7685d8b05b80f3bf99eef534c2022.png](../../_resources/fcb2fb6abdcb463fac3d8eaf030b59b1.png)
+![fcb2fb6abdcb463fac3d8eaf030b59b1](https://user-images.githubusercontent.com/16600691/110018925-76f82780-7ced-11eb-9f5e-c8bc555b7ede.png)
 
 ### Framework Tools
 
