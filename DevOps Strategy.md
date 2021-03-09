@@ -58,8 +58,8 @@ To assist in achieving these principles, a DevOps Framework is outlined below to
 In order to accomplish our objectives, the below phrases help drive home a few core principles:
 
 - KISS: Keep It Simple, Scalable
-- Simplicity beats complexity every time<sup>1</sup>
-- Business processes need to be ironed out before technical pipelines can be implemented <sup>2</sup>
+- Simplicity beats complexity every time
+- Business processes need to be ironed out before technical pipelines can be implemented <sup>1</sup>
 
 Also keep in mind Conway's Law:
 
@@ -145,5 +145,4 @@ These works are recommend reading to understand the full impact and ideals behin
 
 * * *
 
-<sup>1</sup>Jock Willink
-<sup>2</sup>The Phoenix Project
+<sup>1</sup>The Phoenix Project
