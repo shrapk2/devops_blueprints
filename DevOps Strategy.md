@@ -103,7 +103,7 @@ Aside from client-required contractual obligations or minimal edge cases, this t
 
 As an organizational goal, we should leverage a tool that allows for effective work, but strive to achieve that with the minimalist approach available. More is definitely not better in this regard and will ultimately affect, and work against, DevOps adoption.
 
-Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate tooling to ensure efficiency within the organization.
+Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate/competing tooling to ensure efficiency within the organization.
 
 | Phase | Functional Activities | Tool Examples |
 | --- | --- | --- |
@@ -123,7 +123,7 @@ Automation, as a component of DevOps (largely the singular focus in most organiz
 
 ### Recommended Reading
 
-These works are recommend reading to understand the full impact and ideals behind DevOps.  They were also used as source material to build this document from.
+These works are recommend reading to understand the full impact and ideals behind DevOps.  They were also used as source material to build this document.
 
 - DevOps Adoption Playbook
     - Sanjeev Sharma
