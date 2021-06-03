@@ -17,20 +17,21 @@ In order to develop any framework, workflow, or toolset, a team must understand 
 
 Many organizations face challenges to properly succeed in DevOps, not because of lack of talent or resources, but due to improper scope or understanding what they’ve set about achieving with obtaining “DevOps”.
 
-This document hopes to guide an organizational understanding of DevOps; its principles, frameworks, and objectives.
+This document hopes to guide an organizational understanding of DevOps; its principles, frameworks, and objectives; while also aligning to the organization's core values and strategic visions.
 
 ## What is DevOps?
 
-As stated, what actually is DevOps? Aside from being a portmanteau of “Development” and “Operations”; DevOps is difficult to define as no great consensus has been adopted and it is a moving target within the industry. Using Wikipedia as a source, even there it is not definitively defined:
+As stated, what is DevOps? Aside from being a portmanteau of “Development” and “Operations”; DevOps is difficult to define as no great consensus has been adopted and it is an evolving target within the industry. Using Wikipedia as one source, there it is not definitively defined:
 
 > ...suggested defining DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality"
 
 Even with the great minds of industry, it is still a somewhat elusive term, creating challenges to scope. Which begs the question, if the industry cannot define it, how can we hope to achieve it as an organization? Ultimately, DevOps becomes a cultural and process oriented term more so than an actual toolset or “check box” to be achieved.
 
-As defined by this strategy document, achieving DevOps within an organization is a ***culture*** of:
+As defined by this strategy document, achieving DevOps within an organization is a ***culture*** and ***tooling*** of:
 
 - Continuous Integration
 - Continuous Deployment
+- Continuous Feedback
 - Continuous Improvement
 - Continuous Quality
 
@@ -67,19 +68,20 @@ Also keep in mind Conway's Law:
 
 ## DevOps Framework
 
-To ensure each principle is met and DevOps can be achieved, the below framework should be used for each project or initiative to ensure consistency and uniformity between differing efforts. Each phase in the framework should produce a deliverable that will be used in the succeeding phases. These can and *should* be viewed as cyclical in execution and organizationally adopted. This cyclical execution ensures the ability to enable continuous improvement and an opportunity to evaluate and improve the processes for reach phase.
+To ensure each principle is met and DevOps can be achieved, the below framework should be used for each project or initiative to ensure consistency and uniformity between differing efforts. Each phase in the framework should produce a deliverable that will be used in the succeeding phases. These can and *should* be viewed as cyclical in execution and organizationally adopted. This cyclical execution ensures the ability to enable continuous improvement and an opportunity to evaluate and improve the processes for each phase.
 
 1.  Requirements
 2.  Design
-3.  Build
-4.  Validate
-5.  Release
-6.  Deploy
-7.  Monitor
+3.  Code
+4.  Build
+5.  Validatation
+6.  Release
+7.  Deploy
+8.  Monitor
 
-> Note: Security should be considered during every phase, with "trust, but verify" scanning processes during #4
-> 
-> Aside from the Requirements and Design phases, each succeeding phase should be automated in accordance the organization's Automation Framework.
+> Security should be integral in every phase, with "trust, but verify" scanning processes during Validation
+
+Aside from the Requirements and Design phases, each succeeding phase should be automated in accordance the organization's Automation Framework and tooling.
 
 At a minimum, each phase should also involve stakeholders from the following teams:
 
@@ -95,22 +97,23 @@ This framework can also be viewed as a “pipeline” in which to facilitate a D
 
 ### Framework Tools
 
-To accomplish these tasks from a technical perspective, the organization has to standardize on an acceptable "toolbox" to ensure the principles can be met. Every project or initiative should adopt this standardization. Without standardization, chaos is and will prevail throughout the technology teams, thus working directly against DevOps theory.
+To accomplish these tasks from a technical perspective, the organization must standardize on an acceptable "toolbox" to ensure the principles can be met. Every project or initiative should adopt this standardization. Without standardization, chaos is and will prevail throughout the technology teams, thus working directly against DevOps theory.
 
 By adopting a common toolbox, this ensures every initiative conforms to the same tooling and processes throughout the organization.
 
 Aside from client-required contractual obligations or minimal edge cases, this toolbox should be the default tooling in use by the organization to maximize effectiveness and ensure consistency across our entire IT landscape.
 
-As an organizational goal, we should leverage a tool that allows for effective work, but strive to achieve that with the minimalist approach available. More is definitely not better in this regard and will ultimately affect, and work against, DevOps adoption.
+As an organizational goal, we should leverage a tool that allows for effective work, but strive to achieve that with the minimalist approach available. More is not better in this regard and will ultimately affect, and work against, DevOps adoption.
 
-Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate/competing tooling to ensure efficiency within the organization.
+Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate/competing tooling to ensure efficiency within the organization. This is a sample of the data:
 
 | Phase | Functional Activities | Tool Examples |
 | --- | --- | --- |
 | Requirements | Inventory, Identify | JIRA/Confluence/Sharepoint/Slack/Kanban |
-| Design | Value Stream Mapping, Planning | Java, Python, Ruby, Value Stream Mappings |
+| Design | Value Stream Mapping, Planning | What Language? (Java, Python, Ruby, etc.), Value Stream Mappings, Version Control |
+| Code |     | GitHub, GitLab, TFS, Azure DevOps |
 | Build |     | GitLab-CI, Jenkins, Gradle, Maven |
-| Validate | Code quality, Security, Functionality | SonarQube, Selenium, JMeter, SOAP UI, SAST/DAST |
+| Validation | Code quality, Security, Functionality | SonarQube, Selenium, JMeter, SOAP UI, SAST/DAST |
 | Release |     | Docker, Helm, RPM, WAR, Nexus |
 | Deploy |     | Terraform, Ansible, Helm |
 | Monitor |     | Grafana, Prometheus, Splunk, Graylog, FluentD, Nessus, Tripwire |
@@ -133,8 +136,6 @@ These works are recommend reading to understand the full impact and ideals behin
     - Gene Kim, Kevin Behr, George Spaffort
 - The Goal
     - Dr. Eliyahu Goldratt
-- The Lean Startup
-    - Eric Reis
 
 ### Additional Sources
 
