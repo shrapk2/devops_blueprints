@@ -3,13 +3,37 @@
 - [Objective](#objective)
 - [What is DevOps?](#what-is-devops)
 - [DevOps Principles](#devops-principles)
-    - [Design Ethos](#design-ethos)
+  - [Design Ethos](#design-ethos)
 - [DevOps Framework](#devops-framework)
-    - [Framework Tools](#framework-tools)
+  - [Requirements](#requirements)
+    - [Metrics](#requirements-metrics)
+    - [Deliverables](#requirements-deliverables)
+  - [Design](#design)
+    - [Metrics](#design-metrics)
+    - [Deliverables](#design-deliverables)
+  - [Code](#code)
+    - [Metrics](#code-metrics)
+    - [Deliverables](#code-deliverables)
+  - [Build](#build)
+    - [Metrics](#build-metrics)
+    - [Deliverables](#build-deliverables)
+  - [Validation](#validation)
+    - [Metrics](#validation-metrics)
+    - [Deliverables](#validation-deliverables)
+  - [Release](#release)
+    - [Metrics](#release-metrics)
+    - [Deliverables](#release-deliverables)
+  - [Deploy](#deploy)
+    - [Metrics](#deploy-metrics)
+    - [Deliverables](#deploy-deliverables)
+  - [Monitor](#monitor)
+    - [Metrics](#monitor-metrics)
+    - [Deliverables](#monitor-deliverables)
+  - [Framework Tools](#framework-tools)
 - [Automation Framework](#automation-framework)
 - [Recommended Reading and Sources](#recommended-reading-and-sources)
-    - [Recommended Reading](#recommended-reading)
-    - [Additional Sources](#additional-sources)
+  - [Recommended Reading](#recommended-reading)
+  - [Additional Sources](#additional-sources)
 
 ## Objective
 
@@ -41,14 +65,14 @@ As with all projects and initiatives, the successful adoption of DevOps is in de
 
 ## DevOps Principles
 
-Prior to executing uniform and consistent DevOps practices, principles need to be established to guide the execution and processes. A sort of CONOPS, or Concept of Operations. For our organization, these principles should include the following tenets to ensure effective DevOps is achieved. Each project, product, or solution should evaluate and meet these principles:
+Prior to executing uniform and consistent DevOps practices, principles need to be established to guide the execution and processes. A sort of CONOPS, or Concept of Operations. For our organization, these principles should include the following to ensure effective DevOps is achieved. Each project, product, or solution should evaluate and meet these principles:
 
-1.  Simplicity
-2.  Cloud Native
-3.  Automated
-4.  Secure
-5.  Scalable
-6.  Cost Optimized
+1. Simplicity
+2. Cloud Native
+3. Automated
+4. Secure
+5. Scalable
+6. Cost Optimized
 
 Again, if the solutions do not meet the above considerations, it should be re-evaluated and re-designed until all are achieved or otherwise compensated via other means.
 
@@ -60,7 +84,7 @@ In order to accomplish our objectives, the below phrases help drive home a few c
 
 - KISS: Keep It Simple, Scalable
 - Simplicity beats complexity every time
-- Business processes need to be ironed out before technical pipelines can be implemented <sup>1</sup>
+- Business processes need to be ironed out before technical pipelines can be implemented<sup>1</sup>
 
 Also keep in mind Conway's Law:
 
@@ -70,14 +94,14 @@ Also keep in mind Conway's Law:
 
 To ensure each principle is met and DevOps can be achieved, the below framework should be used for each project or initiative to ensure consistency and uniformity between differing efforts. Each phase in the framework should produce a deliverable that will be used in the succeeding phases. These can and *should* be viewed as cyclical in execution and organizationally adopted. This cyclical execution ensures the ability to enable continuous improvement and an opportunity to evaluate and improve the processes for each phase.
 
-1.  Requirements
-2.  Design
-3.  Code
-4.  Build
-5.  Validatation
-6.  Release
-7.  Deploy
-8.  Monitor
+1. Requirements
+2. Design
+3. Code
+4. Build
+5. Validation
+6. Release
+7. Deploy
+8. Monitor
 
 > Security should be integral in every phase, with "trust, but verify" scanning processes during Validation
 
@@ -95,6 +119,221 @@ This framework can also be viewed as a “pipeline” in which to facilitate a D
 
 ![fcb2fb6abdcb463fac3d8eaf030b59b1](https://user-images.githubusercontent.com/16600691/110018925-76f82780-7ced-11eb-9f5e-c8bc555b7ede.png)
 
+### Requirements
+
+To define and achieve success, requirements must be obtained. Without requirements, the scope and success of any project will be in jeopardy. In the DevOps sense, the requirements phase should include goals, metrics, and expectations for each DevOps initiative.
+
+Sample questions to answer:
+
+- What automation tools are required (and in accordance with the Automation Framework)?
+- Which components should be automated?
+- What is the timeline?
+- What is the desired end state of this effort?
+- Is this scoped correctly to achieve the DevOps [principles](#devops-principles) and frequent releasing?
+
+Keep in mind, these should be scoped and well-defined deliverables. As with any DevOps initiative, preventing scope creep is key to successful implementation.
+
+#### Requirements: Metrics
+
+- Timing
+  - Lead Time (timing from assignment to completion time)
+  - Cycle Time (timing from beginning of task to completion)
+- Number of stakeholders involved.
+- Number of requirements to be addressed.
+
+#### Requirements: Deliverables
+
+- Clear expectations of the initiative.
+- Achievable metrics to base success.
+- Sufficient information to continue into the Design phase.
+- Adequate scoping to avoid creepage.
+- Publish document detailing the requirements for stakeholder review. 
+
+### Design
+
+Upon clear definition of requirements, the next phase in the cycle is determining the design to meet those requirements.
+
+This design should include the high-level architecture of the pipeline, as well as the technologies that facilitate the continuous movement within the pipeline.
+
+Note, this is not a re-architecture of the application (although it could be required depending on the continuous feedback), but an architecture of the *DevOps* process, to include all facets of the *continuous* DevOps mindset.
+
+Ensure the design accounts for small implementation batches, helping to enable the continuous nature required to achieve DevOps.
+
+- **Always ask**: is this design in compliance with the DevOps principles and ethos?
+
+#### Design: Metrics
+
+- Timing
+  - Lead Time
+  - Cycle Time
+- Number of tools required to achieve requirements.
+
+#### Design: Deliverables
+
+- Simple design that will implement the pipeline.
+- Design published for all stakeholders to review.
+
+### Code
+
+The Code phase is the first phase that implements automation and non-human interaction. Upon understanding the requirements and design, the code used to facilitate the product is created. This will vary depending on project and requirements. However, the automation leveraged between the Code and Build phases should be replicated as much as possible between projects to reduce overall effort between projects.
+
+#### Code: Metrics
+
+- Timing
+  - Lead Time
+  - Cycle Time
+- Coding language(s) used for the project.
+
+#### Code: Deliverables
+
+- Source code of the application, ready for the pipeline.
+- Automation to initiate the Build phase or completeness for a pull-based build.
+- Frequent commits and small, scoped batches or features.
+- Target daily commits to initiate the pipeline. 
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
+### Build
+
+The Build phase begins with what should be automated through the rest of the pipeline. During the Build phase, the source code committed in the Code phase is properly built to enable the remaining phases of DevOps.
+
+This build phase will be different depending on the source code; however, the end state should always be the same: a functional binary of code that can be tested and executed.
+
+#### Build: Metrics
+
+The phase should also include automated reporting of standardized build metrics, including:
+
+- Phase Timing
+  - Lead Time
+  - Cycle Time
+- Build Success/Failure
+- Individual binary build time (if applicable)
+- Build size (if applicable)
+- Detailed build times:
+  - Start of the build
+  - Dependency capture
+  - Publishing to repository
+  - Artifact cleanup
+
+#### Build: Deliverables
+
+- Binary or other wised package source code.
+- Delivery to the common repository for that code type.
+- Automated reporting of metrics to relevant stakeholders.
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
+### Validation
+
+The Test phase includes all manner of software or system validation. This should include testing of the individual builds or services to ensure functionality, quality, and security. Any errors during this phase should be reported via automated means to enable prompt response, cycling back to the Code phase.
+
+#### Validation: Metrics
+
+- Phase Timing
+  - Lead Time
+  - Cycle Time
+- Code quality metrics
+- Security report and metrics
+  - Vulnerability report
+  - Number of vulnerabilities
+    - High/Medium/Low
+- Test metrics
+  - What components failed?
+  - Percentage of failed components?
+  - Duration of each test
+  - Historical comparison data
+
+#### Validation: Deliverables
+
+- Pass/Fail assessments:
+  - Functional
+  - Quality	
+  - Security (SAST/DAST/etc.)
+  - Additional as required per code type.
+- Reporting, detailing the above pass/fail tests, to include:
+  - Functional
+  - Quality
+  - Security
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
+### Release
+
+After successful completion of the Test phase, the workflow automatically continues to release the artifact into a repository or other staging environment for further review/approval. Where applicable to the deliverable, this should also release validated artifacts into a completed system of components for a full end-to-end regression test.
+
+#### Release: Metrics
+
+- Phase Timing
+  - Lead Time
+  - Cycle Time
+- Validation
+  - Complete regression test results
+  - Test metrics
+    - What components failed?
+    - Percentage of failed components?
+    - Duration of each test
+    - Historical comparison data
+- Detailed release times:
+  - Building of environment or duration of updating existing environment
+  - Publishing to repository
+  - Artifact cleanup (if applicable)
+
+#### Release: Deliverables
+
+- Delivery into a “Pre-Production” or “Staging” environment
+  - Enables complete system regression testing.
+- Production-ready release to a repository (i.e. Docker container, Product URL, etc.)
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
+### Deploy
+
+This is the final movement phase of the lifecycle, with the artifacts delivered into an end-state or production environment. Artifacts at this phase should have completed all validation and integrity checks, ensuing a stable, predictable product presented to the customer.
+
+Not all initiatives will require this phase, as some may be delivered offline to a given customer at which point the final state would be the release of a valid artifact to its downloadable or transportable repository.
+
+To orchestrate the release of an artifact, this phase typically consists of tools that leverage:
+
+- Configuration management
+- Infrastructure as Code (IaC)
+
+#### Deploy: Metrics
+
+- Phase Timing
+  - Lead Time
+  - Cycle Time
+- Does it require deployment?
+- Detailed deployment times:
+  - Building of secondary (canary) environment or duration of updating existing environment
+  - Artifact cleanup or failover (if applicable)
+- Validation metrics
+  - Deployment failed?
+  - Percentage of failed components?
+
+#### Deploy: Deliverables
+
+- Complete and functional delivery into a production environment.
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
+### Monitor
+
+While all phases require continuous operations to achieve DevOps goals, this is especially important during the Monitor phase. This phase provides continuous observability to the environments deployed during the deployment phase. The deliverables of this phase should provide key metrics to enable continuous feedback and improvement.
+
+#### Monitor: Metrics
+
+- Phase Timing
+  - Lead Time
+  - Cycle Time
+- Application-specific metrics, including:
+  - User login times
+  - User concurrency
+  - Response times
+  - Up time
+  - Maintenance periods
+  - Component availability
+  - And many more depending on the application and system deployed.
+
+#### Monitor: Deliverables
+
+- Continuous monitoring of an application, component, or system to provide critical data into the DevOps workflow.
+- Metrics stored in a way to enable monitoring, historical lookup, and comparison.
+
 ### Framework Tools
 
 To accomplish these tasks from a technical perspective, the organization must standardize on an acceptable "toolbox" to ensure the principles can be met. Every project or initiative should adopt this standardization. Without standardization, chaos is and will prevail throughout the technology teams, thus working directly against DevOps theory.
@@ -105,7 +344,11 @@ Aside from client-required contractual obligations or minimal edge cases, this t
 
 As an organizational goal, we should leverage a tool that allows for effective work, but strive to achieve that with the minimalist approach available. More is not better in this regard and will ultimately affect, and work against, DevOps adoption.
 
-Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate/competing tooling to ensure efficiency within the organization. This is a sample of the data:
+Use this table to map DevOps Phase and Tool relationships. Upon completion, review and reduce duplicate/competing tooling to ensure efficiency within the organization.
+
+Upon acceptance and unification of this toolbox within the organization, socialize and hold accountable all stakeholders in the DevOps processes.
+
+This is a sample of the data:
 
 | Phase | Functional Activities | Tool Examples |
 | --- | --- | --- |
@@ -129,20 +372,19 @@ Automation, as a component of DevOps (largely the singular focus in most organiz
 These works are recommend reading to understand the full impact and ideals behind DevOps.  They were also used as source material to build this document.
 
 - DevOps Adoption Playbook
-    - Sanjeev Sharma
+  - Sanjeev Sharma
 - DevOps Handbook
-    - Gene Kim, Jez Humble, Patrick Debois, John Willis
+  - Gene Kim, Jez Humble, Patrick Debois, John Willis
 - The Phoenix Project
-    - Gene Kim, Kevin Behr, George Spaffort
+  - Gene Kim, Kevin Behr, George Spaffort
 - The Goal
-    - Dr. Eliyahu Goldratt
+  - Dr. Eliyahu Goldratt
 
 ### Additional Sources
 
 - [12 Factor App](https://12factor.net/)
 - [SAFe DevOps Series](https://www.scaledagileframework.com/devops/)
 - [DevOps Tools & Frameworks](https://analyticsindiamag.com/devops-tools-frameworks-everything-you-need-to-know)
-
 
 * * *
 
